@@ -66,6 +66,18 @@ body {
     text-decoration:none;
 }
 
+#footer-credit {
+	color: rgb(99, 99, 99);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
 .circulo {
     background: rgb(221, 221, 221);
     border-radius: 52px;
