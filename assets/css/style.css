@@ -66,6 +66,14 @@ body {
     text-decoration:none;
 }
 
+#logoPhoto {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 50%;
+}
+
 #footer-credit {
 	color: rgb(99, 99, 99);
     font-size: 0.8rem;
