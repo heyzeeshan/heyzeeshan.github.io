@@ -6,680 +6,7 @@
     <title>Mohammed Zeeshan Jagirdar | Software Developer</title>
     <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
     <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --gray: #6b7280;
-            --white: #ffffff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--white);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 2rem;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .cta-button {
-            background-color: var(--primary);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--primary-dark);
-            color: white;
-        }
-        
-        /* Hero Section */
-        #hero {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .highlight {
-            color: var(--primary);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-        }
-        
-        /* Sections */
-        section {
-            padding: 6rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.25rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-        
-        /* Experience Section */
-        .experience-item {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .job-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .company {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        .date {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .job-description {
-            margin-top: 1rem;
-        }
-        
-        .job-description li {
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-        
-        .job-description li:before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-        
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .skill-category h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-        
-        .skill-tag {
-            background: var(--light);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--dark);
-        }
-        
-        /* Education Section */
-        .education-item {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .degree {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .institution {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            text-align: center;
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--dark);
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            background: white;
-            border-radius: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .contact-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-        
-        .project-image {
-            height: 200px;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
-            margin-bottom: 0.75rem;
-            color: var(--dark);
-        }
-        
-        .project-content p {
-            color: var(--gray);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-tags span {
-            background: var(--light);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--dark);
-        }
-        
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .btn-link:hover {
-            color: var(--primary-dark);
-        }
-        
-        .btn-link i {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-link:hover i {
-            transform: translateX(5px);
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-        
-        .contact-info p {
-            color: var(--gray);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-item i {
-            font-size: 1.25rem;
-            color: var(--primary);
-            margin-right: 1rem;
-            margin-top: 0.25rem;
-        }
-        
-        .contact-item h4 {
-            font-size: 1rem;
-            color: var(--dark);
-            margin-bottom: 0.25rem;
-        }
-        
-        .contact-item a, .contact-item p {
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: white;
-            color: var(--dark);
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .social-links a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        /* Contact Form */
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-        
-        .footer-content {
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .footer-text {
-            color: #9ca3af;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .footer-links span {
-            color: #4b5563;
-        }
-        
-        /* Back to Top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 999;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .back-to-top:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .animate-on-scroll.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .contact-info {
-                text-align: center;
-            }
-            
-            .contact-details {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.5rem;
-            }
-            
-            .contact-item {
-                flex: 1 1 200px;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .contact-item i {
-                margin-right: 0;
-                margin-bottom: 0.5rem;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .back-to-top {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-                bottom: 1.5rem;
-                right: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -693,6 +20,11 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact" class="cta-button">Contact Me</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
@@ -700,18 +32,16 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-image">
+                    <div class="hero-avatar">MZ</div>
+                </div>
                 <div class="hero-text">
                     <h1>Hi, I'm <span class="highlight">Zeeshan Jagirdar</span></h1>
                     <p class="hero-subtitle">Software Developer | Odoo Expert | Web Developer</p>
                     <p>I build exceptional digital experiences with clean, efficient code and user-focused design.</p>
-                    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
                         <a href="#contact" class="cta-button">Get In Touch</a>
-                        <a href="#projects" class="cta-button" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">View My Work</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div style="width: 300px; height: 300px; background: #e0f2fe; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--primary);">
-                        MZ
+                        <a href="#projects" class="cta-button" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color);">View My Work</a>
                     </div>
                 </div>
             </div>
@@ -721,14 +51,14 @@
     <!-- About Section -->
     <section id="about" class="container">
         <h2 class="section-title">About Me</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p>I'm a passionate Software Developer with strong expertise in Odoo (v11 to v18), Python, and JavaScript. With hands-on experience in building and customizing Odoo modules, I specialize in creating scalable web solutions that drive business growth.</p>
             <p style="margin-top: 1.5rem;">My approach combines technical excellence with a deep understanding of user needs, ensuring that every project I work on delivers real value. I'm particularly skilled at optimizing workflows and creating intuitive interfaces that enhance user experience.</p>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" style="background-color: #f9fafb;">
+    <section id="experience">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             
@@ -816,7 +146,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" style="background-color: #f9fafb;">
+    <section id="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
             
@@ -838,7 +168,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container" style="padding: 6rem 0;">
+    <section id="projects" class="container">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
@@ -893,7 +223,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" style="background-color: #f9fafb; padding: 6rem 0;">
+    <section id="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-container">
@@ -978,57 +308,6 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Back to top button
-        const backToTop = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // Add your form submission logic here
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            });
-        }
-
-        // Add animation on scroll
-        const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animate');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', animateOnScroll);
-        window.addEventListener('load', animateOnScroll);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
