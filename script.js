@@ -26,12 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Form submission with Formspree
     const contactForm = document.getElementById('contactForm');
+    const formStatus = document.querySelector('.form-status');
+
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const form = e.target;
             const data = new FormData(form);
             const action = form.action;
+            const submitButton = form.querySelector('button');
+
+            submitButton.disabled = true;
+            formStatus.innerHTML = 'Sending...';
 
             fetch(action, {
                 method: 'POST',
@@ -41,19 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }).then(response => {
                 if (response.ok) {
-                    alert('Thank you for your message! I will get back to you soon.');
+                    formStatus.innerHTML = 'Thanks for your submission!';
                     form.reset();
                 } else {
                     response.json().then(data => {
                         if (Object.hasOwn(data, 'errors')) {
-                            alert(data["errors"].map(error => error["message"]).join(", "));
+                            formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                         } else {
-                            alert('Oops! There was a problem submitting your form');
+                            formStatus.innerHTML = 'Oops! There was a problem submitting your form';
                         }
                     })
                 }
             }).catch(error => {
-                alert('Oops! There was a problem submitting your form');
+                formStatus.innerHTML = 'Oops! There was a problem submitting your form';
+            }).finally(() => {
+                submitButton.disabled = false;
             });
         });
     }
