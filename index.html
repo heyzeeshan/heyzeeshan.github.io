@@ -1,1 +1,498 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Zeeshan Jagirdar | Software Developer</title>
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --gray: #6b7280;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            color: white;
+        }
+        
+        /* Hero Section */
+        #hero {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .highlight {
+            color: var(--primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.25rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .job-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .company {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .job-description {
+            margin-top: 1rem;
+        }
+        
+        .job-description li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .job-description li:before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--dark);
+        }
+        
+        /* Education Section */
+        .education-item {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .degree {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .institution {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">MZJ</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="cta-button">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Zeeshan Jagirdar</span></h1>
+                    <p class="hero-subtitle">Software Developer | Odoo Expert | Web Developer</p>
+                    <p>I build exceptional digital experiences with clean, efficient code and user-focused design.</p>
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                        <a href="#projects" class="cta-button" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div style="width: 300px; height: 300px; background: #e0f2fe; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--primary);">
+                        MZ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">About Me</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>I'm a passionate Software Developer with strong expertise in Odoo (v11 to v18), Python, and JavaScript. With hands-on experience in building and customizing Odoo modules, I specialize in creating scalable web solutions that drive business growth.</p>
+            <p style="margin-top: 1.5rem;">My approach combines technical excellence with a deep understanding of user needs, ensuring that every project I work on delivers real value. I'm particularly skilled at optimizing workflows and creating intuitive interfaces that enhance user experience.</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background-color: #f9fafb;">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Software Developer</h3>
+                <span class="company">Bista Solutions Pvt Ltd</span>
+                <span class="date">Nov 2020 - Present</span>
+                <ul class="job-description">
+                    <li>Worked extensively on Odoo versions 13 to 18 including core modules like Shopfloor, Barcode, POS, and Live Chat.</li>
+                    <li>Developed and customized dashboards, widgets, and JS views using OWL JS framework.</li>
+                    <li>Integrated AWS SQS and Usersnap for enhanced system performance and debugging.</li>
+                    <li>Migrated complex workflows and modules across Odoo versions.</li>
+                    <li>Led QA by writing comprehensive test cases for Odoo modules.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Freelance Web Developer</h3>
+                <span class="date">May 2018 - Nov 2020</span>
+                <ul class="job-description">
+                    <li>Built custom websites for Social Biscuit, Rainmaker, SR Cloud Tech, and Inspire Change.</li>
+                    <li>Collaborated with a digital marketing firm to develop web apps for ethical and educational initiatives.</li>
+                    <li>Designed responsive UIs and implemented SEO-friendly frontends.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3 class="job-title">Web Developer Intern</h3>
+                <span class="company">Vorfreude Community</span>
+                <span class="date">Apr 2020 - Jul 2020</span>
+                <ul class="job-description">
+                    <li>Built and designed mobile-first web apps during COVID-19 for community awareness and support.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3/SCSS</span>
+                    <span class="skill-tag">XML</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Frameworks & Libraries</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Odoo (v11-v18)</span>
+                    <span class="skill-tag">OWL (JS)</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">jQuery</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">AWS SQS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Other Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Agile/Scrum</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background-color: #f9fafb;">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <h3 class="degree">MBA in Information Technology</h3>
+                <span class="institution">NMIMS (Narsee Monjee Institute of Management Studies)</span>
+                <span class="date">2021 - 2022</span>
+                <p>Relevant Courses: IT Strategy, Business Analytics, Project Management, Digital Transformation, Enterprise Resource Planning</p>
+            </div>
+            
+            <div class="education-item">
+                <h3 class="degree">Bachelor of Engineering in Information Technology</h3>
+                <span class="institution">Mumbai University</span>
+                <span class="date">Mar 2017 – Mar 2020</span>
+                <p>Relevant Courses: Python, Web Development, Android Development, IoT, Big Data</p>
+                <p>CGPI: 6.98</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">    </section>
+    <section id="projects" class="container">    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Zeeshan Jagirdar. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
