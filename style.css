@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #0d6efd;
     --primary-dark: #0b5ed7;
@@ -105,16 +106,18 @@ body {
 .cta-button {
     background-color: var(--primary-color);
     color: var(--surface-color) !important;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.5rem;
     border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     background-color: var(--primary-dark);
     color: var(--surface-color) !important;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.secondary {
@@ -170,6 +173,12 @@ h1 {
 
 .hero-subtitle {
     font-size: 1.5rem;
+    color: var(--text-secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
     color: var(--text-secondary-color);
     margin-bottom: 3rem;
 }
