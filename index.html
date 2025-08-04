@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Zeeshan Jagirdar | Software Developer</title>
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">MZJ</a>
             <ul class="nav-links">
@@ -18,7 +18,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#contact" class="cta-button">Contact Me</a></li>
+                <li><a href="#contact" class="cta-button">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -32,114 +32,115 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-image">
-                    <div class="hero-avatar">MZ</div>
-                </div>
-                <div class="hero-text">
-                    <h1>Hi, I'm <span class="highlight">Zeeshan Jagirdar</span></h1>
-                    <p class="hero-subtitle">Software Developer | Odoo Expert | Web Developer</p>
-                    <p>I build exceptional digital experiences with clean, efficient code and user-focused design.</p>
-                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
-                        <a href="#contact" class="cta-button">Get In Touch</a>
-                        <a href="#projects" class="cta-button" style="background: transparent; color: var(--primary-color); border: 2px solid var(--primary-color);">View My Work</a>
-                    </div>
+                <div class="hero-avatar">MZ</div>
+                <h1 class="animate-on-scroll">Hi, I'm <span class="highlight">Zeeshan Jagirdar</span></h1>
+                <p class="hero-subtitle animate-on-scroll">Software Developer | Odoo Expert | Web Developer</p>
+                <p class="animate-on-scroll">I build exceptional digital experiences with clean, efficient code and user-focused design.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                    <a href="#projects" class="cta-button secondary">View My Work</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>I'm a passionate Software Developer with strong expertise in Odoo (v11 to v18), Python, and JavaScript. With hands-on experience in building and customizing Odoo modules, I specialize in creating scalable web solutions that drive business growth.</p>
-            <p style="margin-top: 1.5rem;">My approach combines technical excellence with a deep understanding of user needs, ensuring that every project I work on delivers real value. I'm particularly skilled at optimizing workflows and creating intuitive interfaces that enhance user experience.</p>
+    <section id="about">
+        <div class="container text-center" style="max-width: 800px;">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <p class="animate-on-scroll">I'm a passionate Software Developer with strong expertise in Odoo (v11 to v18), Python, and JavaScript. With hands-on experience in building and customizing Odoo modules, I specialize in creating scalable web solutions that drive business growth.</p>
+            <p class="animate-on-scroll" style="margin-top: 1.5rem;">My approach combines technical excellence with a deep understanding of user needs, ensuring that every project I work on delivers real value. I'm particularly skilled at optimizing workflows and creating intuitive interfaces that enhance user experience.</p>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="experience-item">
-                <h3 class="job-title">Software Developer</h3>
-                <span class="company">Bista Solutions Pvt Ltd</span>
-                <span class="date">Nov 2020 - Present</span>
-                <ul class="job-description">
-                    <li>Worked extensively on Odoo versions 13 to 18 including core modules like Shopfloor, Barcode, POS, and Live Chat.</li>
-                    <li>Developed and customized dashboards, widgets, and JS views using OWL JS framework.</li>
-                    <li>Integrated AWS SQS and Usersnap for enhanced system performance and debugging.</li>
-                    <li>Migrated complex workflows and modules across Odoo versions.</li>
-                    <li>Led QA by writing comprehensive test cases for Odoo modules.</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <h3 class="job-title">Freelance Web Developer</h3>
-                <span class="date">May 2018 - Nov 2020</span>
-                <ul class="job-description">
-                    <li>Built custom websites for Social Biscuit, Rainmaker, SR Cloud Tech, and Inspire Change.</li>
-                    <li>Collaborated with a digital marketing firm to develop web apps for ethical and educational initiatives.</li>
-                    <li>Designed responsive UIs and implemented SEO-friendly frontends.</li>
-                </ul>
-            </div>
-            
-            <div class="experience-item">
-                <h3 class="job-title">Web Developer Intern</h3>
-                <span class="company">Vorfreude Community</span>
-                <span class="date">Apr 2020 - Jul 2020</span>
-                <ul class="job-description">
-                    <li>Built and designed mobile-first web apps during COVID-19 for community awareness and support.</li>
-                </ul>
+            <h2 class="section-title animate-on-scroll">Work Experience</h2>
+            <div class="timeline">
+                <div class="experience-item animate-on-scroll">
+                    <div class="experience-content">
+                        <h3 class="job-title">Software Developer</h3>
+                        <span class="company">Bista Solutions Pvt Ltd</span>
+                        <span class="date">Nov 2020 - Present</span>
+                        <ul class="job-description">
+                            <li>Worked extensively on Odoo versions 13 to 18 including core modules like Shopfloor, Barcode, POS, and Live Chat.</li>
+                            <li>Developed and customized dashboards, widgets, and JS views using OWL JS framework.</li>
+                            <li>Integrated AWS SQS and Usersnap for enhanced system performance and debugging.</li>
+                            <li>Migrated complex workflows and modules across Odoo versions.</li>
+                            <li>Led QA by writing comprehensive test cases for Odoo modules.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item animate-on-scroll">
+                    <div class="experience-content">
+                        <h3 class="job-title">Freelance Web Developer</h3>
+                        <span class="company">Self-Employed</span>
+                        <span class="date">May 2018 - Nov 2020</span>
+                        <ul class="job-description">
+                            <li>Built custom websites for Social Biscuit, Rainmaker, SR Cloud Tech, and Inspire Change.</li>
+                            <li>Collaborated with a digital marketing firm to develop web apps for ethical and educational initiatives.</li>
+                            <li>Designed responsive UIs and implemented SEO-friendly frontends.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item animate-on-scroll">
+                    <div class="experience-content">
+                        <h3 class="job-title">Web Developer Intern</h3>
+                        <span class="company">Vorfreude Community</span>
+                        <span class="date">Apr 2020 - Jul 2020</span>
+                        <ul class="job-description">
+                            <li>Built and designed mobile-first web apps during COVID-19 for community awareness and support.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3/SCSS</span>
-                    <span class="skill-tag">XML</span>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category animate-on-scroll">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3/SCSS</span>
+                        <span class="skill-tag">XML</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Odoo (v11-v18)</span>
-                    <span class="skill-tag">OWL (JS)</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">jQuery</span>
+                <div class="skill-category animate-on-scroll">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Odoo (v11-v18)</span>
+                        <span class="skill-tag">OWL (JS)</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">jQuery</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Tools & Platforms</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">AWS SQS</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Linux</span>
+                <div class="skill-category animate-on-scroll">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">AWS SQS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Other Skills</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="skill-tag">Responsive Design</span>
-                    <span class="skill-tag">UI/UX Design</span>
-                    <span class="skill-tag">Agile/Scrum</span>
+                <div class="skill-category animate-on-scroll">
+                    <h3>Other Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Responsive Design</span>
+                        <span class="skill-tag">UI/UX Principles</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,75 +149,60 @@
     <!-- Education Section -->
     <section id="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            
-            <div class="education-item">
+            <h2 class="section-title animate-on-scroll">Education</h2>
+            <div class="education-item animate-on-scroll">
                 <h3 class="degree">MBA in Information Technology</h3>
                 <span class="institution">NMIMS (Narsee Monjee Institute of Management Studies)</span>
                 <span class="date">2021 - 2022</span>
-                <p>Relevant Courses: IT Strategy, Business Analytics, Project Management, Digital Transformation, Enterprise Resource Planning</p>
+                <p><strong>Relevant Courses:</strong> IT Strategy, Business Analytics, Project Management, Digital Transformation, Enterprise Resource Planning</p>
             </div>
-            
-            <div class="education-item">
+            <div class="education-item animate-on-scroll">
                 <h3 class="degree">Bachelor of Engineering in Information Technology</h3>
                 <span class="institution">Mumbai University</span>
                 <span class="date">Mar 2017 – Mar 2020</span>
-                <p>Relevant Courses: Python, Web Development, Android Development, IoT, Big Data</p>
+                <p><strong>Relevant Courses:</strong> Python, Web Development, Android Development, IoT, Big Data</p>
                 <p>CGPI: 6.98</p>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-cube"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Odoo Module Development</h3>
-                    <p>Customized Odoo modules and created new JS components with OWL framework. Integrated various third-party services and optimized performance.</p>
-                    <div class="project-tags">
-                        <span>Odoo</span>
-                        <span>Python</span>
-                        <span>JavaScript</span>
-                        <span>OWL</span>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image"><i class="fas fa-cube"></i></div>
+                    <div class="project-content">
+                        <h3>Odoo Module Development</h3>
+                        <p>Customized Odoo modules and created new JS components with OWL framework. Integrated various third-party services and optimized performance.</p>
+                        <div class="project-tags">
+                            <span>Odoo</span><span>Python</span><span>JavaScript</span><span>OWL</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <a href="#" class="btn-link">View Project →</a>
                 </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Queue Management App</h3>
-                    <p>Designed and developed a queue management application for COVID scenarios, helping businesses manage customer flow safely.</p>
-                    <div class="project-tags">
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>Firebase</span>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="project-content">
+                        <h3>Queue Management App</h3>
+                        <p>Designed and developed a queue management application for COVID scenarios, helping businesses manage customer flow safely.</p>
+                        <div class="project-tags">
+                            <span>Flutter</span><span>Dart</span><span>Firebase</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <a href="#" class="btn-link">View Project →</a>
                 </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="project-content">
-                    <h3>Human Rescue Robot</h3>
-                    <p>Developed a human rescue robot for disaster management scenarios, a finalist project at the Red Dot Foundation Youth Innovation Challenge.</p>
-                    <div class="project-tags">
-                        <span>Robotics</span>
-                        <span>Python</span>
-                        <span>IoT</span>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image"><i class="fas fa-robot"></i></div>
+                    <div class="project-content">
+                        <h3>Human Rescue Robot</h3>
+                        <p>Developed a human rescue robot for disaster management scenarios, a finalist project at the Red Dot Foundation Youth Innovation Challenge.</p>
+                        <div class="project-tags">
+                            <span>Robotics</span><span>Python</span><span>IoT</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <a href="#" class="btn-link">View Project →</a>
                 </div>
             </div>
         </div>
@@ -225,9 +211,9 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
             <div class="contact-container">
-                <div class="contact-info">
+                <div class="contact-info animate-on-scroll">
                     <h3>Let's Connect</h3>
                     <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
                     <div class="contact-details">
@@ -254,18 +240,12 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/heyzeeshan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/heyzeeshan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <a href="https://linkedin.com/in/heyzeeshan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/heyzeeshan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form animate-on-scroll" id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -293,10 +273,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">MZJ</div>
-                <p class="footer-text">© 2025 Mohammed Zeeshan Jagirdar. All rights reserved.</p>
+                <p class="footer-text">&copy; 2025 Mohammed Zeeshan Jagirdar. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
-                    <span>•</span>
+                    <span>&bull;</span>
                     <a href="#">Terms of Service</a>
                 </div>
             </div>
@@ -304,7 +284,7 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
