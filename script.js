@@ -24,14 +24,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Form submission
+    // Form submission with Formspree
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Replace with your actual form submission logic (e.g., AJAX call)
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
+            const form = e.target;
+            const data = new FormData(form);
+            const action = form.action;
+
+            fetch(action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert('Oops! There was a problem submitting your form');
+                        }
+                    })
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem submitting your form');
+            });
         });
     }
 
